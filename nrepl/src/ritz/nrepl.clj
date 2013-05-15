@@ -250,7 +250,7 @@ generate a name for the thread."
   (when log-level
     (set-level log-level))
   (let [server (start-server
-                :bind "localhost" :port 0 :ack-port ack-port
+                :bind host :port port :ack-port ack-port
                 :handler (debug-handler host port))
         vm (launch-vm
             (merge

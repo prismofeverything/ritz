@@ -123,7 +123,7 @@
     (case op
       "eval" (if (and file-path line)
                (h msg)
-               (do (source-form! (read-string id) code) (h msg)))
+               (do (source-form! id code) (h msg)))
       "source-forms" (source-forms-reply msg)
       (h msg))))
 
